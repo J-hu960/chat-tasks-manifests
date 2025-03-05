@@ -1,0 +1,13 @@
+image:
+  repository: jordisalazarbadia/chat-tasks
+  tag: "eee8b03bce2a8b8613fc064c03d90b35e7bd76a2"
+  pullPolicy: Always
+  containerPort: 8080
+
+secret:
+  name: chat-tasks-sealedsecret
+  namespace: prod
+
+replicaCount: 1
+
+securityContext: {}
