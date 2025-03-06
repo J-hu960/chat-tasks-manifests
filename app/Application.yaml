@@ -1,0 +1,19 @@
+project: default
+source:
+  repoURL: 'https://github.com/J-hu960/chat-tasks-manifests.git'
+  path: .
+  targetRevision: main
+  helm:
+    parameters:
+      - name: image.tag
+        value: latest  # Esto será reemplazado automáticamente por el nuevo SHA
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: prod
+syncPolicy:
+  automated: {}
+
+metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: "jordisalazarbadia/chat-tasks"
+    argocd-image-updater.argoproj.io/myapp.update-strategy: "digest"
