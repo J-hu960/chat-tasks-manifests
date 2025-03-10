@@ -38,8 +38,30 @@ spec:
                 secretKeyRef:
                   name: chat-tasks-secret
                   key: OPENAI_API_KEY
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: chat-tasks-secret
+                  key: DATABASE_URL
+           
+           
             - name: OPENAI_ORG_ID
               valueFrom:
                 secretKeyRef:
                   name: chat-tasks-secret
                   key: OPENAI_ORG_ID
+        - name: mongodb
+          image: "mongo:latest"
+          ports:
+            - containerPort: 27017
+              name: mongodb
+          volumeMounts:
+            - name: mongodb-data
+              mountPath: /data/db
+          env:
+            - name: MONGO_INITDB_DATABASE
+              value: "mydatabase"
+        
+      volumes:
+        - name: mongodb-data
+          emptyDir: {}  
