@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: chatbot-tasks
+  namespace: argocd
+spec:
+  destination:
+    namespace: prod  
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/J-hu960/chat-tasks-manifests.git
+    targetRevision: main
+    path: .
+    helm:
+      valueFiles:
+        - values.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
