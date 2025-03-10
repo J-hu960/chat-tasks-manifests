@@ -1,6 +1,6 @@
 image:
   repository: jordisalazarbadia/chat-tasks
-  tag: "529478f99d7c61ac8e4efe4aa51a19c430271bd7"
+  tag: "4789b42fca789be7dd358ed7605518a723d45b39"
   pullPolicy: Always
   containerPort: 8080
 
