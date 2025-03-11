@@ -1,8 +1,20 @@
 image:
   repository: jordisalazarbadia/chat-tasks
-  tag: "e1e3fbf6620fca9a2ec3730cded44dbc749a9e79"
+  tag: "beba406b37b614a5399c6792e68debe35a6b5cb7"
   pullPolicy: Always
   containerPort: 3000
+
+mongodb:
+  auth:
+    enabled: true
+    rootPassword: "supersecurepassword"  
+    username: "myuser" 
+    password: "mypassword"  
+    database: "mydatabase" 
+  persistence:
+    enabled: true
+    size: 5Gi  
+
 
 secret:
   name: chat-tasks-secret
