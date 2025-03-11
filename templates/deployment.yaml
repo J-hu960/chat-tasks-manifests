@@ -55,10 +55,10 @@ spec:
                 secretKeyRef:
                   name: mongodb
                   key: mongodb-password
-            - name: MONGO_DATABASE
-              valueFrom:
-                secretKeyRef:
-                  name: mongodb
-                  key: mongodb-database
+            # - name: MONGO_DATABASE
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: mongodb
+            #       key: mongodb-database
 
           
