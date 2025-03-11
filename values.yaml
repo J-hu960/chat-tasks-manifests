@@ -2,7 +2,7 @@ image:
   repository: jordisalazarbadia/chat-tasks
   tag: "502a6ab932f3e9eeaf914d37f897acc47b939be4"
   pullPolicy: Always
-  containerPort: 8080
+  containerPort: 3000
 
 secret:
   name: chat-tasks-secret
