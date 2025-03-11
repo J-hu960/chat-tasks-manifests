@@ -44,4 +44,5 @@ spec:
                   name: chat-tasks-secret
                   key: OPENAI_ORG_ID
             - name: DATABASE_URL
-              value: "mongodb://root:supersecurepassword@my-mongo-mongodb.default.svc.cluster.local:27017/mydatabase"
+              value: mongodb://myuser:mypassword@my-mongodb:27017/mydatabase
+"

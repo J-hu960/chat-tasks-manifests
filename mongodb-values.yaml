@@ -1,0 +1,9 @@
+auth:
+  enabled: true
+  rootPassword: "supersecurepassword"
+  usernames:
+    - "myuser"
+  passwords:
+    - "mypassword"
+  databases:
+    - "mydatabase"
