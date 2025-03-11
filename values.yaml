@@ -6,7 +6,7 @@ image:
 
 secret:
   name: chat-tasks-secret
-  namespace: prod
+  namespace: default
 
 replicaCount: 1
 

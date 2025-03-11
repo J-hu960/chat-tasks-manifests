@@ -5,11 +5,11 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: prod  
+    namespace: default  
     server: https://kubernetes.default.svc
   project: default
   source:
     repoURL: https://github.com/J-hu960/chat-tasks-manifests.git
     targetRevision: main
-    path: .
+    path: templates
    
