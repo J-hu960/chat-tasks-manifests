@@ -12,10 +12,4 @@ spec:
     repoURL: https://github.com/J-hu960/chat-tasks-manifests.git
     targetRevision: main
     path: .
-    helm:
-      valueFiles:
-        - values.yaml
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+   
