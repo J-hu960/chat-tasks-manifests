@@ -4,18 +4,6 @@ image:
   pullPolicy: Always
   containerPort: 3000
 
-mongodb:
-  auth:
-    enabled: true
-    rootPassword: "supersecurepassword"  
-    username: "myuser" 
-    password: "mypassword"  
-    database: "mydatabase" 
-  persistence:
-    enabled: true
-    size: 5Gi  
-
-
 secret:
   name: chat-tasks-secret
   namespace: default

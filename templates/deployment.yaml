@@ -44,5 +44,8 @@ spec:
                   name: chat-tasks-secret
                   key: OPENAI_ORG_ID
             - name: DATABASE_URL
-              value:  "mongodb://10.96.245.93:27017"
+              valueFrom: 
+                secretKeyRef:
+                  name: chat-tasks-secret
+                  key: DATABASE_URL
 
