@@ -45,4 +45,4 @@ spec:
                   key: OPENAI_ORG_ID
             - name: DATABASE_URL
               value:  "mongodb://10.96.245.93:27017"
-"
+
